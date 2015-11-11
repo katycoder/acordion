@@ -1,0 +1,83 @@
+* {
+	margin: 0; 
+	padding: 0;
+}
+body {
+	background: url("../images/bg.jpg"); 
+	font-family: arial, verdana, tahoma;
+}
+.accordian {
+	width: 620px;
+    height: 470px;
+    overflow: hidden;
+	margin: 100px auto;
+}
+.accordian ul {
+	width: 1000px;
+}
+
+.accordian li {
+	position: relative;
+	display: block;
+	width: 60px;
+	float: left;
+	
+	border-left: 1px solid #888;
+	/*efecto para las images*/
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+/*el tamaño para que tenga la imagen el acordion mistras no se muestre la imagen*/
+.accordian ul:hover li {width: 40px;}
+/* el tamaño al qu ese van extender las imagenes */
+.accordian ul li:hover {width: 320px;}
+
+
+.accordian li img {
+	display: block;
+}
+
+/*posicion y efecto de los textos antes del hover para que sea llamado */
+.image_title {
+	position: absolute;
+	top: 40%;
+	margin-top: -30px;
+	right: 20px;
+	left: 20px;
+	overflow: hidden;
+	text-align: center;
+	background: rgba(87, 73, 81, 0.3);
+	line-height: 20px;
+	font-size: 18px;
+	/*para esconder el texto de cada imagen */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-weight: 700;
+	padding: 20px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+
+}
+.image_title a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 20px;
+	font-size: 16px;
+}
+.image_title:hover{
+	-webkit-transition: all 0.4s ease-in-out 0.5s;
+    -moz-transition: all 0.4s ease-in-out 0.5s;
+    -o-transition: all 0.4s ease-in-out 0.5s;
+    -ms-transition: all 0.4s ease-in-out 0.5s;
+    transition: all 0.4s ease-in-out 0.5s;
+	/*para llamar al texo de cada imagen */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+    filter: alpha(opacity=99);
+	opacity: 1;
+	top: 50%;
+}
